@@ -14,20 +14,40 @@ Activity.destroy_all
 #   activity data in the database.  Afterwards, display a
 #   single salesperson's activity data:
 
-apple = Company.find_by({ "name" => "Apple"})
+
 
 # 1. insert 3 rows in the activities table with relationships to
 # a single salesperson and 2 different contacts
 
-contact = Contact.new
-contact["first_name"] = "Tim"
-contact["last_name"] = "Cook"
-contact["email"] = "tim@apple.com"
-contact["company_id"] = apple["id"]
-contact.save
+hockey = Activity.find_by({ "note" => "Hockey"})
+
+activity = Activity.new
+activity["salesperson_id"] = "11"
+activity["company_id"] = "23"
+activity["note"] = "Hockey"
+activity.save
+
+baseball = Activity.find_by({ "note" => "Baseball"})
+
+activity2 = Activity.new
+activity2["salesperson_id"] = "11"
+activity2["company_id"] = "23"
+activity2["note"] = "Baseball"
+activity2.save
+
+basketball = Activity.find_by({ "note" => "Basketball"})
+
+activity3 = Activity.new
+activity3["salesperson_id"] = "11"
+activity3["company_id"] = "24"
+activity3["note"] = "Basketball"
+activity3.save
 
 # 2. Display all the activities between the salesperson used above
 # and one of the contacts (sample output below):
+
+
+
 
 # ---------------------------------
 # Activities between Ben and Tim Cook:
