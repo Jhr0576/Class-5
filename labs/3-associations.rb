@@ -22,24 +22,24 @@ Activity.destroy_all
 hockey = Activity.find_by({ "note" => "Hockey"})
 
 activity = Activity.new
-activity["salesperson_id"] = "11"
-activity["company_id"] = "23"
+activity["salesperson_id"] = jacob["id"]
+activity["company_id"] = apple["id"]
 activity["note"] = "Hockey"
 activity.save
 
 baseball = Activity.find_by({ "note" => "Baseball"})
 
 activity2 = Activity.new
-activity2["salesperson_id"] = "11"
-activity2["company_id"] = "23"
+activity2["salesperson_id"] = jacob["id"]
+activity2["company_id"] = apple["id"]
 activity2["note"] = "Baseball"
 activity2.save
 
 basketball = Activity.find_by({ "note" => "Basketball"})
 
 activity3 = Activity.new
-activity3["salesperson_id"] = "11"
-activity3["company_id"] = "24"
+activity3["salesperson_id"] = jacob["id"]
+activity3["company_id"] = amazon["id"]
 activity3["note"] = "Basketball"
 activity3.save
 
