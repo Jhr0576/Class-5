@@ -19,7 +19,7 @@ contact.save
 
 contact = Contact.new
 contact["first_name"] = "Craig"
-contact["last_name"] = "Federight"
+contact["last_name"] = "Federighi"
 contact["email"] = "craig@apple.com"
 contact["company_id"] = apple["id"]
 contact.save
@@ -44,3 +44,7 @@ apple_contacts = Contact.where({ "company_id" => apple["id"]})
 puts "There are #{apple_contacts.count} contacts at Apple."
 
 # 3. What is the full name of each contact who works at Apple?
+
+for contact in apple_contacts
+    puts "#{contact["first_name"]} #{contact["last_name"]}"
+end
