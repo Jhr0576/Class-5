@@ -46,15 +46,19 @@ puts "There are #{Company.all.count} companies."
 # all_companies = Company.all
 # puts all_companies.inspect
 
-cali_companies = Company.where({"state" => "CA"})
-puts cali_companies.inspect
+# cali_companies = Company.where({"state" => "CA"})
+# puts cali_companies.inspect
 
 # 4. query companies table to find single row for Apple
 
-apple = Company.find_by({ "name" => "Apple"})
-puts apple.inspect
+# apple = Company.find_by({ "name" => "Apple"})
+# puts apple.inspect
 
 # 5. read a row's column value
+
+apple = Company.find_by({ "name" => "Apple"})
+puts apple["url"]
+
 
 # 6. update a row's column value
 
